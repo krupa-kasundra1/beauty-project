@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Suger</title>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- style css -->
+   <link rel="stylesheet" type="text/css" href="css/style.css">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <style>
+body{
+  background-color: lightslategray;
+}
+.container{
+ //width: 900px;
+}
+.card{
+ background-color: #fff;
+ border:none;
+ border-radius: 10px;
+ width: 190px;
+ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+.image-container{
+ position: relative;
+}
+.thumbnail-image{
+ border-radius: 10px !important;
+}
+.discount{
+ background-color: red;
+ padding-top: 1px;
+ padding-bottom: 1px;
+ padding-left: 4px;
+ padding-right: 4px;
+ font-size: 10px;
+ border-radius: 6px;
+ color: #fff;
+}
+.wishlist{
+ height: 25px;
+ width: 25px;
+ background-color: #eee;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ border-radius: 50%;
+ box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.first{
+ position: absolute;
+ width: 100%;
+     padding: 9px;
+}
+.dress-name{
+ font-size: 13px;
+ font-weight: bold;
+ width: 75%;
+}
+.new-price{
+ font-size: 13px;
+ font-weight: bold;
+ color: red;
+}
+.old-price{
+ font-size: 8px;
+ font-weight: bold;
+ color: grey;
+}
+.btn{
+ 
+}
+.creme{
+ background-color: #fff;
+ border: 2px solid grey;
+}
+.creme:hover {
+ border: 3px solid grey;
+}
+.creme:focus {
+ background-color: grey;
+
+}
+.red{
+ background-color: #fff;
+ border: 2px solid red;
+}
+.red:hover {
+ border: 3px solid red;
+}
+.red:focus {
+ background-color: red;
+}
+.blue{
+ background-color: #fff;
+ border: 2px solid #40C4FF;
+}
+.blue:hover {
+ border: 3px solid #40C4FF;
+}
+.blue:focus {
+ background-color: #40C4FF;
+}
+.darkblue{
+ background-color: #fff;
+ border: 2px solid #01579B;
+}
+.darkblue:hover {
+ border: 3px solid #01579B;
+}
+.darkblue:focus {
+ background-color: #01579B;
+}
+.yellow{
+ background-color: #fff;
+ border: 2px solid #FFCA28;
+}
+.yellow:hover {
+ border-radius: 3px solid #FFCA28;
+}
+.yellow:focus {
+ background-color: #FFCA28;
+}
+.item-size{
+ width: 15px;
+ height: 15px;
+ border-radius: 50%;
+ background: #fff;
+ border: 1px solid grey;
+ color: grey;
+ font-size: 10px;
+ text-align: center;
+ align-items: center;
+ display: flex;
+ justify-content: center;
+}
+.rating-star{
+ font-size: 10px !important;
+}
+.rating-number{
+ font-size: 10px;
+ color: grey;
+}
+.buy{
+ font-size: 12px;
+ color: purple;
+ font-weight: 500;
+}
+.voutchers{
+ background-color: #fff;
+ border:none;
+ border-radius: 10px;
+ width: 190px;
+ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+ overflow: hidden;
+}
+.voutcher-divider{
+ display: flex;
+}
+.voutcher-left{
+ width: 60%
+}
+.voutcher-name{
+ color: grey;
+ font-size: 9px;
+ font-weight: 500;
+}
+.voutcher-code{
+ color: red;
+ font-size: 11px;
+ font-weight: bold;
+}
+.voutcher-right{
+ width: 40%;	 
+ background-color: purple;
+ color: #fff;
+}
+.discount-percent{
+ font-size: 12px;
+ font-weight: bold;
+ position: relative;
+ top: 5px;
+}
+.off{
+ font-size: 14px;
+ position: relative;
+ bottom: 5px;
+}
+</style> 
+</head>
+<body>
+  <!-- header section start -->
+      
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" style="height: 79px;">
+    <a class="logo" href="index.html"><img src="images/logo.png" style="margin-left: 10px
+    ;"></a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="navbarSupportedContent" style="font-size: larger;">
+  <ul class="navbar-nav mr-auto" style="margin:81px">
+    <li class="nav-item active">
+      <a class="nav-link" href="index.html">HOME<span class="sr-only">(current)</span></a>
+    </li>
+    <li class="nav-item active">
+       <a class="nav-link" href="products.html">PRODUCTS<span class="sr-only">(current)</span></a>
+     </li>
+     <li class="nav-item active">
+       <a class="nav-link" href="about.html">ABOUT<span class="sr-only">(current)</span></a>
+     </li>
+     <li class="nav-item active">
+       <a class="nav-link" href="login.html">LOGIN<span class="sr-only">(current)</span></a>
+     </li>
+     <li class="nav-item active">
+       <a class="nav-link" href="registration.html">REGISTRATION<span class="sr-only">(current)</span></a>
+     </li>
+     <li class="nav-item active">
+       <a class="nav-link" href="feedback.html">FEEDBACK<span class="sr-only">(current)</span></a>
+     </li>
+     
+  </ul>
+  <form class="form-inline my-2 my-lg-0">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+</div>
+</nav>
+ 
+ <!-- header section end -->
+   <div class="container mt-5">
+   <div class="row">
+     <div class="col-md-3">
+       <div class="card">
+         <div class="image-container">
+           <div class="first">
+               <div class="d-flex justify-content-between align-items-center">
+               <span class="discount">-25%</span>
+                 
+               </div>
+             </div>
+           <img src="images/sfoun.jpeg" class="img-fluid rounded thumbnail-image">
+           </div>
+             
+         <div class="product-detail-container p-2">
+           
+           <div class="d-flex justify-content-between align-items-center">    								
+             <h5 class="dress-name">Foundation</h5>
+               <div class="d-flex flex-column mb-2">
+                 <span class="new-price">₹300</span>
+                   
+                 </div>
+           </div>
+           <div class="d-flex justify-content-between align-items-center pt-1">
+               <div>
+                 <i class="fa fa-star-o rating-star"></i>
+                 <span class="rating-number">4.8</span>
+             </div>
+             <a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+             </div>
+         </div>
+         </div>
+        
+       </div>
+     <div class="col-md-3">
+       <div class="card">
+            <div class="image-container">
+              <div class="first">
+               <div class="d-flex justify-content-between align-items-center">
+                  <span class="discount">-25%</span>
+                 
+               </div>
+             </div>
+           <img src="images/slipstic.jpg" class="img-fluid rounded thumbnail-image">
+           </div>
+         <div class="product-detail-container p-2">
+           <div class="d-flex justify-content-between align-items-center">
+             <h5 class="dress-name">Lipstics</h5>
+                  <div class="d-flex flex-column mb-2">
+                  <span class="new-price">₹120</span>
+                    
+                  </div>
+            </div>
+           
+           <div class="d-flex justify-content-between align-items-center pt-1">
+               <div>
+                   <i class="fa fa-star-o rating-star"></i>
+                   <span class="rating-number">4.8</span>
+               </div>
+               <a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+             </div>
+         </div>
+         </div>
+        </div>
+     <div class="col-md-3">
+       <div class="card">
+         <div class="image-container">
+           <div class="first">
+               <div class="d-flex justify-content-between align-items-center">
+               <span class="discount">-25%</span>
+                 
+               </div>
+             </div>
+           <img src="images/seyeshadow.jpeg" class="img-fluid rounded thumbnail-image">
+           </div>
+           <div class="product-detail-container p-2">
+           <div class="d-flex justify-content-between ">
+             <h5 class="dress-name">EyeShadow</h5>
+               <div class="d-flex flex-column mb-2">
+                 <span class="new-price">195</span>
+                   
+                 </div>
+           </div>
+           
+           <div class="d-flex justify-content-between align-items-center pt-1">
+               <div>
+                 <i class="fa fa-star-o rating-star"></i>
+                 <span class="rating-number">4.2</span>
+               </div>
+               <a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+             </div>
+         </div>
+         </div>
+       
+     </div>
+     <div class="col-md-3">
+       <div class="card">
+         <div class="image-container">
+           <div class="first">
+               <div class="d-flex justify-content-between align-items-center">
+               <span class="discount">-25%</span>
+                 
+               </div>
+             </div>
+           <img src="images/sbbcream.jpeg" class="img-fluid rounded thumbnail-image">
+             </div>
+           <div class="product-detail-container p-2">
+             <div class="d-flex justify-content-between ">
+               <h5 class="dress-name">BB-Cream</h5>
+                 <div class="d-flex flex-column mb-2">
+                  
+                   <span class="new-price">₹155</span>
+                     
+                   </div>
+             </div>
+             
+             <div class="d-flex justify-content-between align-items-center pt-1">
+               <div>
+                 <i class="fa fa-star-o rating-star"></i>
+                 <span class="rating-number">3.8</span>
+                 </div>
+                 <a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                 </div>
+             </div>
+             </div>
+           
+         </div>
+       </div>
+       <div class="row" style="padding: 10px; margin-top: 20px;">
+         <div class="col-md-3">
+           <div class="card">
+             <div class="image-container">
+               <div class="first">
+                 <div class="d-flex justify-content-between align-items-center">
+                   <span class="discount">-25%</span>
+                   
+                 </div>
+               </div>
+               <img src="images/blusher.jpeg" class="img-fluid rounded thumbnail-image">
+             </div>
+               
+             <div class="product-detail-container p-2">
+               
+               <div class="d-flex justify-content-between align-items-center">    								
+                 <h5 class="dress-name">Blusher</h5>
+                   <div class="d-flex flex-column mb-2">
+                     <span class="new-price">₹240</span>
+                     
+                   </div>
+               </div>
+   
+   
+               
+               <div class="d-flex justify-content-between align-items-center pt-1">
+                 <div>
+                   <i class="fa fa-star-o rating-star"></i>
+                   <span class="rating-number">4.8</span>
+                 </div>
+                 <a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+               </div>
+             </div>
+           </div>
+           
+         </div>
+         <div class="col-md-3">
+           <div class="card">
+                <div class="image-container">
+                  <div class="first">
+                 <div class="d-flex justify-content-between align-items-center">
+                      <span class="discount">-25%</span>
+             
+                 </div>
+               </div>
+               <img src="images/seyeliner.jpeg" class="img-fluid rounded thumbnail-image">
+             </div>
+             <div class="product-detail-container p-2">
+               <div class="d-flex justify-content-between align-items-center">
+                 <h5 class="dress-name"> EyeLiner</h5>
+                      <div class="d-flex flex-column mb-2">
+                      <span class="new-price">₹150</span>
+                        
+                      </div>
+                </div>
+               
+               <div class="d-flex justify-content-between align-items-center pt-1">
+                 <div>
+                     <i class="fa fa-star-o rating-star"></i>
+                     <span class="rating-number">4.8</span>
+                 </div>
+                 <a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+               </div>
+             </div>
+           </div>
+           
+         </div>
+         <div class="col-md-3">
+           <div class="card">
+             <div class="image-container">
+               <div class="first">
+                 <div class="d-flex justify-content-between align-items-center">
+                   <span class="discount">-25%</span>
+                   
+                 </div>
+
+               </div>
+               <img src="images/snailpolish.jpeg" class="img-fluid rounded thumbnail-image">
+             </div>
+               <div class="product-detail-container p-2">
+               <div class="d-flex justify-content-between ">
+                 <h5 class="dress-name">NailPolish</h5>
+                   <div class="d-flex flex-column mb-2">
+                     <span class="new-price">₹100</span>
+                     
+                   </div>
+               </div>
+               
+               <div class="d-flex justify-content-between align-items-center pt-1">
+                 <div>
+                   <i class="fa fa-star-o rating-star"></i>
+                   <span class="rating-number">4.2</span>
+                 </div>
+                 <a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+               </div>
+             </div>
+           </div>
+           
+         </div>
+         <div class="col-md-3">
+           <div class="card">
+             <div class="image-container">
+               <div class="first">
+                 <div class="d-flex justify-content-between align-items-center">
+                   <span class="discount">-25%</span>
+                   
+                 </div>
+               </div>
+               <img src="images/sprimer.jpg" class="img-fluid rounded thumbnail-image">
+               </div>
+               <div class="product-detail-container p-2">
+                 <div class="d-flex justify-content-between ">
+                   <h5 class="dress-name">Primer</h5>
+                     <div class="d-flex flex-column mb-2">
+                       <span class="new-price">₹350</span>
+                       
+                     </div>
+                 </div>
+                 
+                 <div class="d-flex justify-content-between align-items-center pt-1">
+                 <div>
+                   <i class="fa fa-star-o rating-star"></i>
+                   <span class="rating-number">3.8</span>
+                   </div>
+                   <a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                   </div>
+                 </div>
+               </div>
+               
+             </div>
+           </div>  
+   </div>
+   
+         <!-- footer section start -->
+    <div class="footer_section layout_padding">
+        <div class="container">
+           <div class="footer_logo"><a href="index.html"><img src="images/footer-logo.png"></a></div>
+           <div class="contact_section_2">
+              <div class="row">
+                 <div class="col-sm-4">
+                    <h3 class="address_text">Contact Us</h3>
+                    <div class="address_bt">
+                       <ul>
+                         <li>
+                            <a href="#">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i><span class="padding_left10">Add: Zanzarda Road-Junagadh</span>
+                            </a>
+                          </li>  
+                          <li>
+                             <a href="#">
+                             <i class="fa fa-phone" aria-hidden="true"></i><span class="padding_left10">Call : +01 91800 63005</span>
+                             </a>
+                          </li>
+                          <li>
+                             <a href="#">
+                             <i class="fa fa-envelope" aria-hidden="true"></i><span class="padding_left10">Email : beautiflie@gamil.com</span>
+                             </a>
+                          </li>
+                       </ul>
+                    </div>
+                 </div>
+                 <div class="col-sm-4">
+                    <div class="footer_logo_1"><a href="index.html"><img src="images/footer-logo.png"></a></div>
+                    <p class="dummy_text"><b>This websites provides you a beauty product or beauty kit.You can buy it online.</b></p>
+                      
+                 </div>
+                 <div class="col-sm-4">
+                    <div class="main">
+                       <h3 class="address_text">Best Products</h3>
+                       <p class="ipsum_text">Our beautycare's all products are best and having a good consistancy.</p>
+                    </div>
+                 </div>
+              </div>
+           </div>
+           <div class="social_icon">
+              <ul>
+                 <li>
+                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                 </li>
+                 <li>
+                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                 </li>
+                 <li>
+                    <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                 </li>
+                 <li>
+                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                 </li>
+              </ul>
+           </div>
+        </div>
+     </div>
+     <!-- footer section end -->
+   
+</body>
+</html>
